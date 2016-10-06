@@ -1,0 +1,18 @@
+<h2>Users Section</h2>
+<p> Manage your users</p>
+
+<!-- router outlet here -->
+<div class="row">
+  <!-- list of user -->
+  <div class="col-sm-4">
+    <div class="list-group" *ngIf="users">
+      <a *ngFor="let user of users" class="list-group-item" [routerLink]="['/dashboard/users',user.username]" >
+        {{user.name}}
+      </a>
+    </div>
+  </div>
+  <!-- user details -->
+  <div class="col-sm-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>

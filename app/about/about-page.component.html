@@ -1,0 +1,11 @@
+This is about Page
+<div class="row">
+  <div class="col-sm-4" *ngFor="let user of users">
+    <div class="profile-card" [routerLink]="['/about', user.username]" >
+      <img [src]="user.avatar" alt="" class="img-resposive img-circle">
+      <h2>{{user.name}}</h2>
+      <p><a target="_self" href="https://twitter.com/{{user.username}}">{{user.username}}</a></p>
+      <a target="_blank" href="http://google.com">no link here</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+this is about-user page
+<a (click)="goBack()" class="btn btn-sm btn-info">Go Back</a>
+<div *ngIf="user" class="jumbotron text-center">
+  <h1>{{user.name}} {{user.username}}</h1>
+  <img [src]="user.avatar" alt="" class="img-responsive img-circle">
+</div>
